@@ -18,7 +18,7 @@ features = ["full"]
 rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
-hyper = "1.4.0"
+hyper = { path = "../hyper" }
 futures-util = { version = "0.3.16", default-features = false }
 http = "1.0"
 http-body = "1.0.0"
@@ -31,7 +31,7 @@ tokio = { version = "1", optional = true, default-features = false  }
 tower-service = { version = "0.3", optional = true }
 
 [dev-dependencies]
-hyper = { version = "1.4.0", features = ["full"] }
+hyper = { git = "https://github.com/meowjesty/hyper", branch = "issue/649/first-http-request-missing", features = ["full"] }
 bytes = "1"
 http-body-util = "0.1.0"
 tokio = { version = "1", features = ["macros", "test-util", "signal"] }
