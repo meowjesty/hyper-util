@@ -18,7 +18,7 @@ features = ["full"]
 rustdoc-args = ["--cfg", "docsrs"]
 
 [dependencies]
-hyper = { path = "../hyper" }
+hyper = { git = "https://github.com/meowjesty/hyper", branch = "issue/649/first-http-request-missing" }
 futures-util = { version = "0.3.16", default-features = false }
 http = "1.0"
 http-body = "1.0.0"
